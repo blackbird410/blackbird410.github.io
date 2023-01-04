@@ -208,6 +208,10 @@ header {
 
 
 @media only screen and (max-width: 600px) {
+    html {
+        padding-top: 40px;
+    }
+
     #navlist {
         font-size: 15px;
     }
