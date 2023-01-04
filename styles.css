@@ -1,12 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+
+:root {
+  --header-background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  --color1: green;
+  --color2: black;
+  --welcome-color: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  --welcome-text-color:#8c795d;
+  --contact-bg: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  --projects-bg: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  --welcome-font: Playfair Display;
+
+}
 
 body {
     background-image: url(https://i.pinimg.com/564x/b8/85/4b/b8854b08a5041500bde3ba10902ce0ef.jpg);
 }
 
+main {
+    padding-top: 50px;
+}
+
+#navbar {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+}
+
 #navlist {
+    display: flex;
+    float: right;
     list-style-type: none;
     margin: 0;
-    padding: 10px;
+    padding-left: 60px;
     background-color: transparent;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,20 +38,33 @@ body {
     font-size: 25px;
 }
 
-#navlist li {
-    display: inline;
-}
-
 .navlink {
-    color: gold;
-    padding: 8px 10px;
+    border: 2px solid currentColor;
+    border-radius: 3rem;
+    display: block;
+    color: yellow;
+    text-align: center;
+    font-family: roboto;
+    font-weight: 100;
+    font-size: 1.5rem;
     text-decoration: none;
-    padding: 0 25px 0 25px;
+    padding: 14px 16px;
+    transition: .2s transform ease-in-out;
+    animation: shake 0.82s infinite cubic-bezier(.36, .07, .19, .97) both;
+    will-change: transform;
+    z-index: 0;
 }
 
 .navlink:hover {
-    background-color: gray;
+    background: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
     color: white;
+      transform: translate(0, 0, 0, 0);
+      transform-origin: top left;
+      transition: .2s transform ease-out;
+      will-change: transform;
+    animation: none;
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
 header {
@@ -184,3 +221,23 @@ header {
         height: 350px;
     }
 }
+
+@keyframes shake {
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
