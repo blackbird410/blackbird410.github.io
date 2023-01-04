@@ -153,3 +153,10 @@ header {
         font-size: 90px;
     }
 }
+
+
+@media only screen and (max-width: 600px) {
+    #navlist {
+        font-size: 15px;
+    }
+}
