@@ -76,6 +76,11 @@ header {
     margin-bottom: 0;
 }
 
+#description {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 #about p {
     text-align: justify;
     margin-top: 10px;
@@ -90,6 +95,20 @@ header {
 
 #about a:hover {
     color: yellow;
+}
+
+.certifications {
+    display: grid;
+    place-items: center;
+}
+
+.grid-item {
+    padding: 10px;
+}
+
+.certifications img {
+    width: 500px;
+    height: 500px;
 }
 
 #contact {
@@ -158,5 +177,9 @@ header {
 @media only screen and (max-width: 600px) {
     #navlist {
         font-size: 15px;
+    }
+
+    .fa {
+        padding: 10px;
     }
 }
