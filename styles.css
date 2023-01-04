@@ -182,4 +182,9 @@ header {
     .fa {
         padding: 10px;
     }
+
+    .certifications img {
+        width: 350px;
+        height: 350px;
+    }
 }
