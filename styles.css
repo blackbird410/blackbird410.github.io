@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100");
 
 :root {
-  --header-background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-  --color1: green;
-  --color2: black;
-  --welcome-color: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-  --welcome-text-color:#8c795d;
-  --contact-bg: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-  --projects-bg: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-  --welcome-font: Playfair Display;
-
+  --html-color: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
+
+html {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 body {
     background-image: url(https://i.pinimg.com/564x/b8/85/4b/b8854b08a5041500bde3ba10902ce0ef.jpg);
@@ -72,14 +72,14 @@ header {
 }
 
 #home {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin-top: 35px;
     height: 625px;
     width: 100%;
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-
+    border-radius: 5%;
 }
 
 #home h1 {
@@ -90,9 +90,14 @@ header {
 }
 
 #home h3 {
+    font-size: 25px;
     font-style: italic;
     color: gold;
     margin-top: 0;
+}
+
+h2 {
+    text-align: center;
 }
 
 #about {
@@ -105,20 +110,23 @@ header {
     /*background-image: linear-gradient( 135deg, #6B73FF 10%, #000DFF 100%);*/
     padding: 2px 15px;
     margin-top: 10px;
+    border-radius: 3%;
+    padding-bottom: 15px;
 }
 
 #about h1 {
     text-align: center;
     text-decoration: underline;
-    margin-bottom: 0;
+    margin-bottom: 5px;
+    
 }
 
-#description {
+#description, #chinese {
     padding-left: 25px;
     padding-right: 25px;
 }
 
-#about p {
+#about p, #chinese {
     text-align: justify;
     margin-top: 10px;
     font-size: 20px;
@@ -152,6 +160,7 @@ header {
     margin-top: 10px;
     background-color: #00DBDE;
     background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    border-radius: 15%;
 }
 
 #contact li {
@@ -204,6 +213,16 @@ header {
     #home h1 {
         font-size: 90px;
     }
+
+    #description, #about ul, #chinese {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .grid-item {
+        width: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
 }
 
 
@@ -224,6 +243,12 @@ header {
         width: 350px;
         height: 350px;
     }
+
+    .grid-item {
+        width: 90%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
 }
 
 @keyframes shake {
@@ -245,3 +270,58 @@ header {
       transform: translate3d(4px, 0, 0);
     }
   }
+
+@keyframes colorChange {
+    0% {
+        color: #00DBDE;
+        left: 0px;
+    }
+    25% {
+        color:#d6249f;
+        left: 75px;
+    }
+    50% {
+        color: black;
+        left: 125px;
+    }
+    75% {
+        color: darkgoldenrod;
+        left: -75px;
+    }
+    100% {
+        color: gold;
+        left: 0px;
+        top: 0px;
+    }
+
+}
+
+#home h3 {
+    position: relative;
+    animation-name: colorChange;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    /*
+    Shortcut => animation colorChange 5s linear 2s infinite alternate-reverse ease both
+    */
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 12px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#author {
+    padding: 0;
+    border-radius: 15%;
+    box-shadow: 0 12px 25px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
