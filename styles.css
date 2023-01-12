@@ -19,13 +19,15 @@ body {
 }
 
 main {
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 #navbar {
-    margin-top: 35px;
+    margin-top: 27px;
     overflow: hidden;
     position: fixed; /* Set the navbar to fixed position */
+    background: rgba(0, 0, 0, 0.39);
+    width: 100%;
 }
 
 #navlist {
@@ -33,7 +35,6 @@ main {
     float: right;
     list-style-type: none;
     margin: 0;
-    padding-left: 40px;
     background-color: transparent;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -122,7 +123,25 @@ h2 {
     
 }
 
-#description, #chinese {
+#about blockquote {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+  }
+
+hr {
+    width: 90%;
+}
+
+#about q {
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+#description {
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -158,7 +177,7 @@ h2 {
     text-align: center;
     color: antiquewhite;
     padding: 2px 15px;
-    margin-bottom: 0;
+    margin-bottom: -10px;
     height: 100%;
     background-color: #00DBDE;
     background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
@@ -189,8 +208,7 @@ h2 {
     color: #00DBDE;
 }
 
-.fa-linkedin {
-    padding: 5px;
+.fa-linkedin-square {
     background-color: #f1f1f1;
 }
 
@@ -207,11 +225,15 @@ h2 {
 }
 
 @media only screen and (min-width: 800px) {
+    main {
+        padding-top: 15px;
+    }
+
     #home h1 {
         font-size: 90px;
     }
 
-    #description, #about ul, #chinese {
+    #description, #about ul {
         padding-left: 15%;
         padding-right: 15%;
     }
@@ -219,6 +241,10 @@ h2 {
     .grid-item {
         width: 50%;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    hr {
+        width: 70%;
     }
 }
 
