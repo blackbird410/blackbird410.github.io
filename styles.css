@@ -79,13 +79,13 @@ header {
     text-align: center;
     margin: auto 30px 0 0;
     padding: 0 0 0 0;
-    height: 625px;
+    height: 700px;
     width: 100%;
     /*background-image: url("./page_img/bc/backg.jpg");
     background-size: cover;*/
-    animation: changeBg 100s infinite linear;
-    transition: .4s;
-    transition-delay: .1s;
+    animation: changeBg 100s infinite ease-in-out;
+    transition: opacity 2s;
+    transition-delay: 1s;
 }
 
 #home h1 {
@@ -126,32 +126,9 @@ h2 {
     
 }
 
-#about blockquote {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 40px;
-    margin-right: 40px;
-    text-align: center;
-  }
-
-hr {
-    width: 90%;
-}
-
-#about q {
-    font-style: italic;
-    font-size: 1em;
-}
-
-#description {
-    font-family: FreeMono, monospace;
-}
-
-#about p, #chinese {
+#about p {
     text-align: justify;
-    margin-top: 10px;
-    font-size: 20px;
+    margin-top: 0;
 }
 
 #about a {
@@ -162,11 +139,6 @@ hr {
 
 #about a:hover {
     color: yellow;
-}
-
-#author_bio div {
-    display: inline-flex;
-    place-items: center;
 }
 
 #quote {
@@ -245,16 +217,13 @@ hr {
     }
 
     #home h1 {
-        font-size: 90px;
+        font-size: 130px;
     }
 
     #description, #about ul {
         padding-left: 5%;
         padding-right: 5%;
-    }
-
-    #description {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     #about img {
@@ -262,13 +231,14 @@ hr {
         height: 450px;
     }
 
+    #author_bio div {
+        display: inline-flex;
+        place-items: center;
+    }
+
     .grid-item {
         width: 50%;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    hr {
-        width: 70%;
     }
 }
 
@@ -293,9 +263,19 @@ hr {
     }
 
     #author {
-        padding: 0;
-        width: 90%;
-        height: 100%;
+        width: 60%;
+        height: 70%;
+    }
+
+    #author_bio div {
+        display: -ms-inline-grid;
+        place-items: center;
+    }
+
+    #description {
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 16px;
     }
 
 }
@@ -351,42 +331,36 @@ hr {
         background-image: url("./page_img/bc/i0.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        transition: .2s;
     }
     15%,
     30% {
         background-image: url("./page_img/bc/i1.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        transition: .2s;
     }
     30%,
     45% {
         background-image: url("./page_img/bc/i2.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        transition: .2s;
     }
     45%,
     65% {
         background-image: url("./page_img/bc/i3.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        transition: .2s;
     }
     65%,
     80% {
         background-image: url("./page_img/bc/i4.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        transition: .2s;
     }
     80%,
     100% {
         background-image: url("./page_img/bc/i5.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        transition: .2s;
     }
 }
 
