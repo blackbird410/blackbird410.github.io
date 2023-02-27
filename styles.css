@@ -152,10 +152,10 @@ h2 {
     place-items: center;
 }
 
-.certifications img {
-    width: 450px;
-    height: 450px;
-}
+.grid-item img {
+    width: 750px;
+    height: 750px;
+} 
 
 #contact {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -211,7 +211,7 @@ h2 {
     color: black;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 750px) {
     main {
         padding-top: 15px;
     }
@@ -221,14 +221,9 @@ h2 {
     }
 
     #description, #about ul {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
         font-size: 20px;
-    }
-
-    #about img {
-        width: 350px;
-        height: 450px;
     }
 
     #author_bio div {
@@ -237,7 +232,7 @@ h2 {
     }
 
     .grid-item {
-        width: 50%;
+        width: 80%;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
