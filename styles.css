@@ -36,6 +36,11 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     font-size: 25px;
+    padding-right: 70px;
+}
+
+#navlist li {
+    padding-left: 10px;
 }
 
 .navlink {
@@ -77,9 +82,9 @@ header {
     padding: 0;
     height: 800px;
     width: 100%;
-    animation: changeBg 100s infinite ease-in-out;
+    animation: changeBg 100s infinite ease-out;
     transition: opacity 1s;
-    transition-delay: 0.1s;
+    transition-delay: 0s;
 }
 
 #home h1 {
@@ -134,8 +139,8 @@ h2 {
 
 #quote {
     font-family: Andale Mono, monospace;
-    font-style: italic;
     text-align: center;
+    color: #fdf497;
 }
 
 figure {
@@ -237,10 +242,18 @@ figure {
 }
 
 
-@media only screen and (max-width: 750px) {
-     #navlist {
-        font-size: 15px;
+@media only screen and (max-width: 740px) {
+    #home {
+        width: 100%;
+    }
+    
+    #navlist {
         padding-top: 50px;
+    }
+
+    .navlink {
+        font-size: 60%;
+        font-weight: bold;
     }
 
     .fa {
@@ -268,7 +281,7 @@ figure {
     }
 
     #description {
-        padding-left: 25px;
+        padding-left: 15px;
         padding-right: 25px;
         font-size: 18px;
     }
@@ -280,6 +293,7 @@ figure {
 
     #education, #quote {
         padding-right: 25px;
+        padding-left: 25px;
     }
 
 }
