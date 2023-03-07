@@ -25,6 +25,7 @@ body {
     position: fixed; 
     background: rgba(0, 0, 0, 0.39);
     width: 100%;
+    z-index: 2;
 }
 
 #navlist {
@@ -79,9 +80,12 @@ body {
     margin-top: -50px;
     height: 800px;
     width: 100%;
+    /*
+    Shortcut => animation colorChange 5s linear 2s infinite alternate-reverse ease both
+    */
     animation: changeBg 100s infinite ease-out;
     transition: opacity 1s;
-    transition-delay: 0s;
+    transition-delay: 5s;
 }
 
 .line-1 {
@@ -90,7 +94,7 @@ body {
     font-size: 280%;
     color: beige;
     margin-bottom: 0;
-    margin-left: 30px;
+    padding-left: 40px;
     position: relative;
     top: 50%;  
     width: 24em;
@@ -98,7 +102,7 @@ body {
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    transform: translateY(-50%); 
+    transform: translateY(-60%); 
 }
 
 .anim-typewriter{
@@ -106,7 +110,7 @@ body {
                blinkTextCursor 500ms steps(44) infinite normal;
   }
   @keyframes typewriter{
-    from{width: 0;}
+    from{width: 0em;}
     to{width: 16em;}
   }
   @keyframes blinkTextCursor{
@@ -117,6 +121,42 @@ body {
 h2 {
     text-align: center;
 }
+
+#home h3 {
+    position: relative;
+    animation-name: colorChange;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    /*
+    Shortcut => animation colorChange 5s linear 2s infinite alternate-reverse ease both
+    */
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 12px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#author {
+    padding: 0;
+    border-radius: 15%;
+    box-shadow: 0 12px 25px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+figure {
+    position: relative;
+    animation: slide 3s ease 2s infinite alternate backwards;
+}
+
 
 #about {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -152,14 +192,45 @@ h2 {
 #quote {
     font-family: Andale Mono, monospace;
     text-align: center;
-    color: #fdf497;
+    color: gold;
 }
 
 figure {
-    padding-left: 100px;
     margin-right: 0;
     padding-right: 0;
+    z-index: 1;
 }
+
+.skills {
+    width: 80%;
+    padding: auto;
+    margin: auto;
+    max-width: 600px;
+}
+
+.sk-container {
+    text-align: center;
+    padding: auto;
+    margin: 10px auto 5px auto;
+    width: 80%;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.sk-level {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, 
+    rgba(9,9,121,1) 27%, rgba(0,212,255,1) 100%);
+    border-radius: 10px;
+}
+
+.html {width: 60%;}
+.css {width: 40%;}
+.javascript {width: 20%;}
+.cpp {width: 15%;}
+.python {width: 45%;}
+.git {width: 10%;}
+.github {width: 20%;}
+.vs_code {width: 30%;}
 
 .certifications {
     display: grid;
@@ -226,7 +297,8 @@ figure {
     color: black;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 768px) {
+    /* Design for PCs*/ 
     #home {
         margin-top: -80px;
     }
@@ -240,8 +312,7 @@ figure {
     }
 
     #description {
-        padding-left: 0;
-        padding-right: 10%;
+        padding: 20px 90px 0px 0px;
         font-size: 22px;
     } 
     
@@ -263,7 +334,9 @@ figure {
 }
 
 
-@media only screen and (max-width: 740px) {    
+@media only screen and (max-width: 760px) {
+    /*Phone and PCs*/
+    
     .line-1 {
         width: 15em;
         font-size: 200%;
@@ -336,28 +409,9 @@ figure {
     }
   }
 
-@keyframes colorChange {
-    0% {
-        color: #00DBDE;
-        left: 0px;
-    }
-    25% {
-        color:#d6249f;
-        left: 75px;
-    }
-    50% {
-        color: black;
-        left: 100px;
-    }
-    75% {
-        color: darkgoldenrod;
-        left: -75px;
-    }
-    100% {
-        color: gold;
-        left: 0px;
-        top: 0px;
-    }
+@keyframes slide {
+    from{left: 0px;}
+    to{left:50px}
 
 }
 
@@ -398,34 +452,4 @@ figure {
         background-repeat: no-repeat;
         background-size: cover;
     }
-}
-
-#home h3 {
-    position: relative;
-    animation-name: colorChange;
-    animation-duration: 5s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-    /*
-    Shortcut => animation colorChange 5s linear 2s infinite alternate-reverse ease both
-    */
-}
-
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    border-radius: 12px;
-    padding-top: 5px;
-    padding-bottom: 10px;
-}
-
-#author {
-    padding: 0;
-    border-radius: 15%;
-    box-shadow: 0 12px 25px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
