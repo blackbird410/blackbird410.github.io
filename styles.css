@@ -111,7 +111,7 @@ body {
   }
   @keyframes typewriter{
     from{width: 0em;}
-    to{width: 16em;}
+    to{width: 14em;}
   }
   @keyframes blinkTextCursor{
     from{border-right-color: rgba(255,255,255,.75);}
@@ -161,8 +161,9 @@ figure {
 #about {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: antiquewhite;
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    /*background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);*/
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
     padding: 2px 15px;
     padding-bottom: 15px;
     width: 100%;
@@ -235,6 +236,11 @@ figure {
 .certifications {
     display: grid;
     place-items: center;
+}
+
+.grid-item {
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    border-radius: 25px;
 }
 
 .grid-item img {
@@ -386,7 +392,6 @@ figure {
         padding-right: 25px;
         padding-left: 25px;
     }
-
 }
 
 @keyframes shake {
@@ -410,9 +415,8 @@ figure {
   }
 
 @keyframes slide {
-    from{left: 0px;}
-    to{left:50px}
-
+    from{left: 0%;}
+    to{left: 5%}
 }
 
 @keyframes changeBg {
